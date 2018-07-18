@@ -25,12 +25,14 @@ class DashbroadController extends Controller
      */
     public function index()
     {
-        Backend::checkRole('cms.dashbroad');
+        Backend::checkRole('cms.dashboard');
         $breadcrumbs = array('root'=>'Home','routeLink' =>null);
         $actionLink = '<a href="'.action('Cms\DashbroadController@index').'"> dashbroad</a>';
         $breadcrumbs = array_merge($breadcrumbs, array('actionLink'=>$actionLink));
         $title = 'Dashbroad';
-
+        $hasMenu = Backend::getMenuByUserAndParentId(0);
+        print_r($hasMenu);
+        die();
         return view('cms.dashbroad.index',compact('title','breadcrumbs'));
     }
 }

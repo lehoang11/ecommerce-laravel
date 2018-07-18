@@ -32,7 +32,7 @@ class AuthServiceProvider extends ServiceProvider
     {
         if (Auth::check()) {
             $userP = User_Profile::where('user_id', Auth::id())->first();
-            $hasMenu = Backend::menuRole();
+            $hasMenu = Backend::getAllMenuHasRole();
             $view->with('userP', $userP ? $userP :null);
             $view->with('hasMenu', $hasMenu);
         }else {

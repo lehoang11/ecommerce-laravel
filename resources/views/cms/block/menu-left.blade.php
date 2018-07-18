@@ -6,7 +6,8 @@
             <div id="sidebar-menu">
 
             <ul>
-                @if($hasMenu)
+                @if($hasMenu) 
+                <li><a href="#">ai la ai</a></li>
                     @foreach($hasMenu as $item)
                         <li class="submenu">
                             <a class="" href="@if($item['child']) # @else {{url('/')}}/{{ADMIN_PATH}}{{$item['link']}}@endif"> {!! $item['icon']!!}<span> {{$item['name']}} </span> @if($item['child']) <span class="menu-arrow"></span> @endif </a>

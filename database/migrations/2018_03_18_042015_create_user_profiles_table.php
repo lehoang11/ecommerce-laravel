@@ -21,7 +21,7 @@ class CreateUserProfilesTable extends Migration
             $table->tinyInteger('status')->unsigned()->default(0);
             $table->string('phone',20);
             $table->integer('sex')->unsigned()->nullable();
-            $table->timestamp('birth_day')->nullable();
+            $table->String('birth_day',20)->nullable();
             $table->string('location');
             $table->string('photo');
             $table->boolean('is_active')->default(true);
@@ -35,7 +35,7 @@ class CreateUserProfilesTable extends Migration
                 'status' => 1,
                 'phone' => '',
                 'sex' => 1,
-                'birth_day' => '1510740243',
+                'birth_day' => '',
                 'location' => '',
                 'photo' =>'',
                 'is_active' => 1,

@@ -16,15 +16,6 @@ class Base
      */
     public function handle($request, Closure $next)
     {
-        if(Laralum::checkInstalled()) {
-            # Check if the user is activated
-            if(Auth::check()) {
-
-            } else {
-
-            }
-        }
-
         return $next($request);
     }
 }

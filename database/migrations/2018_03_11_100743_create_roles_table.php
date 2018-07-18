@@ -17,7 +17,6 @@ class CreateRolesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('description');
-            $table->tinyInteger('module')->unsigned()->nullable();
             $table->tinyInteger('status')->unsigned()->default(0);
             $table->timestamps();
         });
@@ -25,7 +24,6 @@ class CreateRolesTable extends Migration
         Role::create([
             'name' => 'super admin',
             'description' => 'Có vai trò cao nhất, có tất cả các quyền',
-            'module' => 1,
             'status' =>1,
             ]);
     }

@@ -17,7 +17,7 @@ class CreateRoleMenusTable extends Migration
             $table->increments('id');
             $table->integer('role_id')->unsigned();
             $table->integer('menu_id')->unsigned();
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 

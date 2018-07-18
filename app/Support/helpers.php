@@ -58,6 +58,22 @@ if (!function_exists('convertNumber')) {
     }
 }
 
+if (!function_exists('objectToArray')) {
+    function objectToArray($data)
+    {
+        if (is_array($data) || is_object($data))
+        {
+            $result = array();
+            foreach ($data as $key => $value)
+            {
+                $result[$key] = get_object_vars($value);
+            }
+            return $result;
+        }
+        return $data;
+    }
+}
+
 
 
 
